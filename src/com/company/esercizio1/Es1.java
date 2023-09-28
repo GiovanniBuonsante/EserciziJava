@@ -9,6 +9,7 @@ public class Es1 {
         Scanner input = new Scanner(System.in);
         int numberInput = 0, numberMax = 0, numberMin = 0;
 
+        //fatto
         //try to move all the input in the for starting from 0
         /*System.out.println("Enter the 1 number");
         try {
