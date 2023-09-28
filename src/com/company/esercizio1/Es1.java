@@ -8,12 +8,14 @@ public class Es1 {
 	// write your code here
         Scanner input = new Scanner(System.in);
         int numberInput,numberMax, numberMin;
+
+        //try to move all the input in the for starting from 0
         System.out.println("Enter the 1 number");
-        numberInput = input.nextInt();
+        numberInput = input.nextInt(); //remember to handle the not valid input such as character.
         numberMax = numberInput;
         numberMin = numberInput;
         for(int i = 1;i < 5; i++){
-            System.out.printf("Enter the %d number",i+1);
+            System.out.printf("Enter the %d number\n",i+1); //use new line to increase legibility. You can also use some spaces.
             numberInput = input.nextInt();
             if(numberInput > numberMax){
                 numberMax = numberInput;
