@@ -9,9 +9,9 @@ public class Es2 {
         System.out.print("Enter one integer: ");
         number = input.nextInt();
         if(number % 2 == 0){
-            System.out.println("The number is even");
+            System.out.println("The number is even...");
         }else{
-            System.out.println("The number is odd");
+            System.out.println("The number is odd...");
         }
     }
 }
