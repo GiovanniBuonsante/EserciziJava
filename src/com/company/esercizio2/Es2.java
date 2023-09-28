@@ -7,7 +7,7 @@ public class Es2 {
         int number;
         Scanner input = new Scanner(System.in);
         System.out.print("Enter one integer: ");
-        number = input.nextInt();
+        number = input.nextInt(); //remember to handle the not valid input such as character.
         if(number % 2 == 0){
             System.out.println("The number is even...");
         }else{
