@@ -23,5 +23,6 @@ public class Es1 {
             }
         }
         System.out.printf("The number min is %d\nThe number max is: %d",numberMin,numberMax);
+        input.close();
     }
 }

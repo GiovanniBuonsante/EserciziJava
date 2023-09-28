@@ -15,6 +15,6 @@ public class es3 {
         }else{
             System.out.println("The first number isn't divisible by the second number");
         }
-
+        input.close();
     }
 }

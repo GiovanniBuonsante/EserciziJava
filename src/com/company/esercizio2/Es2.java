@@ -13,5 +13,6 @@ public class Es2 {
         }else{
             System.out.println("The number is odd...");
         }
+        input.close();
     }
 }
