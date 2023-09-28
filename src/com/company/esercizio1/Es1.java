@@ -15,13 +15,17 @@ public class Es1 {
             numberInput = input.nextInt(); //remember to handle the not valid input such as character.
         } catch (Exception e) {
             //Excpetion handled - Do something
+            input.next();
         }
-
         numberMax = numberInput;
         numberMin = numberInput;
         for(int i = 1;i < 5; i++){
             System.out.printf("Enter the %d number\n",i+1); //use new line to increase legibility. You can also use some spaces.
-            numberInput = input.nextInt();
+            try {
+                numberInput = input.nextInt();
+            } catch (Exception e) {
+                input.next();
+            }
             if(numberInput > numberMax){
                 numberMax = numberInput;
             }
