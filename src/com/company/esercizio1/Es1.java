@@ -1,8 +1,8 @@
-package com.company;
+package com.company.esercizio1;
 
 import java.util.Scanner;
 
-public class Main {
+public class Es1 {
 
     public static void main(String[] args) {
 	// write your code here
