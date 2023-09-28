@@ -7,10 +7,10 @@ public class Es1 {
     public static void main(String[] args) {
 	// write your code here
         Scanner input = new Scanner(System.in);
-        int numberInput = 0, numberMax, numberMin;
+        int numberInput = 0, numberMax = 0, numberMin = 0;
 
         //try to move all the input in the for starting from 0
-        System.out.println("Enter the 1 number");
+        /*System.out.println("Enter the 1 number");
         try {
             numberInput = input.nextInt(); //remember to handle the not valid input such as character.
         } catch (Exception e) {
@@ -19,18 +19,21 @@ public class Es1 {
         }
         numberMax = numberInput;
         numberMin = numberInput;
-        for(int i = 1;i < 5; i++){
+        */
+        for(int i = 0;i < 5; i++){
             System.out.printf("Enter the %d number\n",i+1); //use new line to increase legibility. You can also use some spaces.
             try {
                 numberInput = input.nextInt();
             } catch (Exception e) {
                 input.next();
             }
-            if(numberInput > numberMax){
+            if(numberInput >= numberMax){
                 numberMax = numberInput;
-            }
-            if(numberInput < numberMin){
-                numberMin = numberInput;
+                if( i == 0 ){
+                    numberMin = numberInput;
+                }
+            } else if (numberInput < numberMin){
+                 numberMin = numberInput;
             }
         }
         System.out.printf("The number min is %d\nThe number max is: %d",numberMin,numberMax);
