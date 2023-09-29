@@ -3,10 +3,15 @@ package com.company.esercizio3;
 import java.util.Scanner;
 
 public class es3 {
+
     public static void main(String[] args){
+
         Scanner input = new Scanner(System.in);
+
         boolean inputNotValid;
+
         int number0 = 0, number1 = 0;
+
         do {
             inputNotValid = false;
             System.out.print("Enter first number: ");
@@ -17,6 +22,7 @@ public class es3 {
                 input.next();
             }
         } while (inputNotValid);
+
         do {
             inputNotValid = false;
             System.out.print("Enter second number: ");

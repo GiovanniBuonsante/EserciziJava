@@ -8,8 +8,11 @@ public class Es1 {
 	// write your code here
         Scanner input = new Scanner(System.in);
         boolean inputNotValid;
+
         int numberInput = 0, numberMin = 0, numberMax = 0;
+
         for(int i = 0;i < 5; i++){
+
             do {
                 inputNotValid  =false;
                 System.out.printf("Enter the %d number: \n",i+1); //use new line to increase legibility. You can also use some spaces.
@@ -20,6 +23,7 @@ public class Es1 {
                     input.next();
                 }
             } while (inputNotValid);
+
             if(numberInput >= numberMax){
                 numberMax = numberInput;
                 if( i == 0 ){
