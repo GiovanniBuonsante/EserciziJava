@@ -5,26 +5,28 @@ import java.util.Scanner;
 public class es3 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        int number0 = 0, number1 = 0, check = 0;
+        boolean inputNotValid;
+        int number0 = 0, number1 = 0;
         do {
+            inputNotValid = false;
             System.out.print("Enter first number: ");
             try {
                 number0 = input.nextInt();
-                check = 1;
             } catch (Exception e) {
+                inputNotValid = true;
                 input.next();
             }
-        } while (check != 1);
-        check = 0;
+        } while (inputNotValid);
         do {
+            inputNotValid = false;
             System.out.print("Enter second number: ");
             try {
                 number1 = input.nextInt();
-                check = 1;
             } catch (Exception e) {
+                inputNotValid = true;
                 input.next();
             }
-        } while (check != 1);
+        } while (inputNotValid);
 
         if(number0 % number1 == 0){
             System.out.println("The first number is divisible by the second number");

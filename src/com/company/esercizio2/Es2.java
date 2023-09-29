@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 public class Es2 {
     public static void main(String[] args){
-        int number = 0, check = 0;
+        int number = 0;
+        boolean inputNotValid;
         Scanner input = new Scanner(System.in);
         do {
+            inputNotValid = false;
             System.out.print("Enter one integer: ");
             try {
                 number = input.nextInt();
-                check = 1;
             } catch (Exception e) {
+                inputNotValid = true;
                 input.next();
             }
-        }while (check != 1);
+        }while (inputNotValid);
         if(number % 2 == 0){
             System.out.println("The number is even...");
         }else{
