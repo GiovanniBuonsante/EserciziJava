@@ -5,11 +5,27 @@ import java.util.Scanner;
 public class es3 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        int number0, number1;
-        System.out.print("Enter first number: ");
-        number0 = input.nextInt();
-        System.out.print("Enter second number: ");
-        number1 = input.nextInt();
+        int number0 = 0, number1 = 0, check = 0;
+        do {
+            System.out.print("Enter first number: ");
+            try {
+                number0 = input.nextInt();
+                check = 1;
+            } catch (Exception e) {
+                input.next();
+            }
+        } while (check != 1);
+        check = 0;
+        do {
+            System.out.print("Enter second number: ");
+            try {
+                number1 = input.nextInt();
+                check = 1;
+            } catch (Exception e) {
+                input.next();
+            }
+        } while (check != 1);
+
         if(number0 % number1 == 0){
             System.out.println("The first number is divisible by the second number");
         }else{
