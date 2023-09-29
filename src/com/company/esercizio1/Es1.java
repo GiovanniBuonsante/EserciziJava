@@ -7,9 +7,10 @@ public class Es1 {
     public static void main(String[] args) {
 	// write your code here
         Scanner input = new Scanner(System.in);
-        int numberInput = 0, numberMin = 0, numberMax = 0, check = 0;
+        int numberInput = 0, numberMin = 0, numberMax = 0, check;
         for(int i = 0;i < 5; i++){
             do {
+                check = 0;
                 System.out.printf("Enter the %d number: \n",i+1); //use new line to increase legibility. You can also use some spaces.
                 try {
                     numberInput = input.nextInt();
