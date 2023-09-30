@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class es9 {
 
     public static void main (String[] args) {
-
+        //programma che calcolo il costo giornalieri per andare a lavoro in macchi na
+        //e il risparmio usa la formula carpooling.
         Scanner input = new Scanner(System.in);
 
         int km, personShare;
