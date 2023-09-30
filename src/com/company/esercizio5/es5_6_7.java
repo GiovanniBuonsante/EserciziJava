@@ -2,7 +2,7 @@ package com.company.esercizio5;
 
 import java.util.Scanner;
 
-public class es5 {
+public class es5_6_7 {
 
     public static void main (String [] args) {
 
