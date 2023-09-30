@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class es8 {
     public static void main(String[] args){
+        //programma che calcola l'incremento della popolazione mondiale
         Scanner input = new Scanner(System.in);
         float worldPopulation;
         float populationGrowthRate;
