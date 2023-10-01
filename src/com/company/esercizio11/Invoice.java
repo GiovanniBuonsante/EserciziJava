@@ -1,3 +1,10 @@
+/*3.12 (Classe Invoice) Scrivete una classe Invoice che un negozio di componenti elettro-
+        nici potrebbe usare per fatturare le merci vendute. Una fattura dovrebbe includere quattro tipi
+        di informazioni sotto forma di variabili di istanza: il codice dell’articolo (tipo String), una
+        descrizione (tipo String), la quantità acquistata (tipo int) e il prezzo unitario (tipo double).
+        La classe dovrà avere un costruttore che inizializzi nel modo appropriato le quattro variabili di
+        istanza. Fornite metodi get e set per ogni variabile di istanza. Fornite inoltre un metodo getIn-
+        voiceAmount che calcola il totale fatturato (ovvero moltiplica il prezzo unitario per la quantità*/
 package com.company.esercizio11;
 
 public class Invoice {
