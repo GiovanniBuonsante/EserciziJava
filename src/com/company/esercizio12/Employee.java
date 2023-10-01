@@ -51,4 +51,7 @@ public class Employee {
         salaryIncrease = salary*((percentage/100)+1);
         return salaryIncrease;
     }
+    public static void stampInformation (Employee employeeToStamp){
+        System.out.printf("%s %s Salary: %.2f€\n", employeeToStamp.getName(), employeeToStamp.getSurname(), employeeToStamp.getSalary());
+    }
 }
