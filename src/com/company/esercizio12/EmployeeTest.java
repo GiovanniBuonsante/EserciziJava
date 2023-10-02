@@ -5,10 +5,7 @@ import java.util.Scanner;
 
 public class EmployeeTest {
     public static void main(String[] args) {
-        String  name;
-        String surname;
-        double salary;
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
         Employee employee1 = new Employee("Giovanni", "Buonsante", 1800.00);
         Employee employee2 = new Employee("Rebecca","Denigris", 1500.00);
         Employee employee3 = new Employee("Vitangelo", "Buonsante",2300.00);
@@ -16,43 +13,25 @@ public class EmployeeTest {
         Employee employee5 = new Employee("","",0.0);
 
 
-        //employee 4
-        System.out.print("Enter name: ");
-        name = input.next();
-        employee4.setName(name);
-        System.out.print("Enter surname: ");
-        surname = input.next();
-        employee4.setSurname(surname);
-        System.out.print("Enter salary: ");
-        salary = input.nextDouble();
-        employee4.setSalary(salary);
+        //employee 4 and employee 5
+        Employee.inputNewEmployee(employee4);
+        System.out.println("----------------");
+        Employee.inputNewEmployee(employee5);
 
-        //employee 5
-        System.out.print("\nEnter name: ");
-        name = input.next();
-        employee5.setName(name);
-        System.out.print("Enter surname: ");
-        surname = input.next();
-        employee5.setSurname(surname);
-        System.out.print("Enter salary: ");
-        salary = input.nextDouble();
-        employee5.setSalary(salary);
+        //Employee.inputNewEmployee(employee5);
 
-        employee1.stampInformation2();
         System.out.println(employee1.toString());
+        System.out.println(employee2.toString());
+
+        employee1.salaryIncrease(10.0);
+        employee2.salaryIncrease(10.0);
+        employee3.salaryIncrease(10.0);
+        employee4.salaryIncrease(10.0);
+        employee5.salaryIncrease(10.0);
+
+        System.out.println(employee1.toString());
+        System.out.println(employee2.toString());
         /*
-        Employee.stampInformation(employee1);
-        Employee.stampInformation(employee2);
-        Employee.stampInformation(employee3);
-        Employee.stampInformation(employee4);
-        Employee.stampInformation(employee5);
-        System.out.println("-------------------");
-        System.out.printf("%s %s Salary: %.2f€\n", employee1.getName(), employee1.getSurname(), employee1.getSalary()*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee2.getName(), employee2.getSurname(), employee2.getSalary()*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee3.getName(), employee3.getSurname(), employee3.getSalary()*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee4.getName(), employee4.getSurname(), employee4.getSalary()*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee5.getName(), employee5.getSurname(), employee5.getSalary()*12);
-        System.out.println("-------------------");
         System.out.printf("%s %s Salary: %.2f€\n", employee1.getName(), employee1.getSurname(), (employee1.salaryIncrease(10.0))*12);
         System.out.printf("%s %s Salary: %.2f€\n", employee2.getName(), employee2.getSurname(), (employee1.salaryIncrease(10.0))*12);
         System.out.printf("%s %s Salary: %.2f€\n", employee3.getName(), employee3.getSurname(), (employee1.salaryIncrease(10.0))*12);

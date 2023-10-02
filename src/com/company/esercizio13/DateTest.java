@@ -6,7 +6,9 @@ import java.util.Scanner;
 
 public class DateTest {
     public static void main (String[] args){
+
         //Scanner input = new Scanner(System.in);
+
         Date date = new Date(26, 7,2023);
         Date date1 = new Date(10,2,2023);
         Date date2 = new Date(0,0,0);

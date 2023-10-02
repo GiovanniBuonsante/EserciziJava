@@ -9,6 +9,8 @@
         */
 package com.company.esercizio12;
 
+import java.util.Scanner;
+
 public class Employee {
     private String name;
     private String surname;
@@ -46,19 +48,31 @@ public class Employee {
     public Double getSalary(){
         return salary;
     }
-    public Double salaryIncrease(Double percentage){
-        return salary*((percentage/100)+1);
+    public void salaryIncrease(Double percentage){
+        setSalary(salary*((percentage/100)+1));
     }
-    public static void stampInformation (Employee employeeToStamp){
-        System.out.printf("%s %s Salary: %.2f€\n", employeeToStamp.getName(), employeeToStamp.getSurname(), employeeToStamp.getSalary());
-    }
-    public void stampInformation2 (){
-        System.out.printf("%s %s Salary: %.2f€\n", name, surname, salary);
-    }
-    public void stampInformation3 (){
-        System.out.printf("%s %s Salary: %.2f€\n", name, surname, salary);
-    }
+
+    //public static void stampInformation (Employee employeeToStamp){
+    //    System.out.printf("%s %s Salary: %.2f€\n", employeeToStamp.getName(), employeeToStamp.getSurname(), employeeToStamp.getSalary());
+    //}
+    //public void stampInformation2 (){
+    //    System.out.printf("%s %s Salary: %.2f€\n", name, surname, salary);
+    //}
+
     public String toString() {
-        return "Employee{" + "name= " + name + ", " + " surname=" + surname + ", " + " salary= " + salary + "}";
+        return "Employee{" + "Name= " + name + ", " + " Surname=" + surname + ", " + " Salary= " + salary*12 + "}";
+    }
+    public static void inputNewEmployee(Employee newEmployee){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter name: ");
+        String name = input.next();
+        newEmployee.setName(name);
+        System.out.print("Enter surname: ");
+        String surname = input.next();
+        newEmployee.setSurname(surname);
+        System.out.print("Enter salary: ");
+        double salary = input.nextDouble();
+        newEmployee.setSalary(salary);
+        input.close();
     }
 }
