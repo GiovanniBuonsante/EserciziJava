@@ -22,5 +22,6 @@ public class DateTest {
         date2.displayDate();
         date3.displayDate();
 
+        input.close();
     }
 }

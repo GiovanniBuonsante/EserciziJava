@@ -9,5 +9,6 @@ public class invoiceTest {
         System.out.println("Total invoice: " + invoiceAmount);
         invoiceAmount = invoice2.getInvoiceAmount();
         System.out.println("Total invoice: " + invoiceAmount);
+
     }
 }
