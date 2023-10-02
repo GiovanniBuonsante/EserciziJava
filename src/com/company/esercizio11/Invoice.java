@@ -29,10 +29,19 @@ public class Invoice {
         this.description = description;
     }
     public void setQuantityBought(Integer quantityBought){
-        this.quantityBought = quantityBought;
+        if(this.quantityBought <= 0){
+            this.quantityBought = 0;
+        } else {
+            this.quantityBought = quantityBought;
+        }
     }
     public void setPriceUnitary(Double priceUnitary){
-        this.priceUnitary = priceUnitary;
+        if (priceUnitary < 0) {
+            this.priceUnitary = 0.0;
+        } else {
+            this.priceUnitary = priceUnitary;
+        }
+
     }
 
     //Getter
@@ -50,14 +59,8 @@ public class Invoice {
     }
 
     //creazione metodo per calcolare totale fattura
-    public Double getInvoiceAmount(Integer quantityBought, Double priceUnitary){
+    public Double getInvoiceAmount(){
         double totalInvoice;
-        if(quantityBought < 0 ){
-            return totalInvoice = 0;
-        }
-        if(priceUnitary < 0){
-            priceUnitary = 0.0;
-        }
         totalInvoice = quantityBought*priceUnitary;
         return totalInvoice;
     }

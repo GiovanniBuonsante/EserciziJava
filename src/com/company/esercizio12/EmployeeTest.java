@@ -50,10 +50,10 @@ public class EmployeeTest {
         System.out.printf("%s %s Salary: %.2f€\n", employee4.getName(), employee4.getSurname(), employee4.getSalary()*12);
         System.out.printf("%s %s Salary: %.2f€\n", employee5.getName(), employee5.getSurname(), employee5.getSalary()*12);
         System.out.println("-------------------");
-        System.out.printf("%s %s Salary: %.2f€\n", employee1.getName(), employee1.getSurname(), (employee1.salaryIncrease(employee1.getSalary(), 10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee2.getName(), employee2.getSurname(), (employee1.salaryIncrease(employee2.getSalary(), 10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee3.getName(), employee3.getSurname(), (employee1.salaryIncrease(employee3.getSalary(), 10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee4.getName(), employee4.getSurname(), (employee1.salaryIncrease(employee4.getSalary(), 10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee5.getName(), employee5.getSurname(), (employee1.salaryIncrease(employee5.getSalary(), 10.0))*12);
+        System.out.printf("%s %s Salary: %.2f€\n", employee1.getName(), employee1.getSurname(), (employee1.salaryIncrease(10.0))*12);
+        System.out.printf("%s %s Salary: %.2f€\n", employee2.getName(), employee2.getSurname(), (employee1.salaryIncrease(10.0))*12);
+        System.out.printf("%s %s Salary: %.2f€\n", employee3.getName(), employee3.getSurname(), (employee1.salaryIncrease(10.0))*12);
+        System.out.printf("%s %s Salary: %.2f€\n", employee4.getName(), employee4.getSurname(), (employee1.salaryIncrease(10.0))*12);
+        System.out.printf("%s %s Salary: %.2f€\n", employee5.getName(), employee5.getSurname(), (employee1.salaryIncrease(10.0))*12);
     }
 }

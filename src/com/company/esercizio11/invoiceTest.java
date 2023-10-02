@@ -5,9 +5,9 @@ public class invoiceTest {
         double invoiceAmount;
         Invoice invoice1 = new Invoice("FG089","computer",23,1230.00);
         Invoice invoice2 = new Invoice("GH789", "cuffie",23, 49.99);
-        invoiceAmount = invoice1.getInvoiceAmount(invoice1.getQuantityBought(), invoice1.getPriceUnitary());
+        invoiceAmount = invoice1.getInvoiceAmount();
         System.out.println("Total invoice: " + invoiceAmount);
-        invoiceAmount = invoice1.getInvoiceAmount(invoice2.getQuantityBought(), invoice2.getPriceUnitary());
+        invoiceAmount = invoice2.getInvoiceAmount();
         System.out.println("Total invoice: " + invoiceAmount);
     }
 }
