@@ -7,6 +7,8 @@
         voiceAmount che calcola il totale fatturato (ovvero moltiplica il prezzo unitario per la quantità*/
 package com.company.esercizio11;
 
+import com.company.esercizio13.Date;
+
 public class Invoice {
     private String codProduct;
     private String description;
@@ -29,7 +31,7 @@ public class Invoice {
         this.description = description;
     }
     public void setQuantityBought(Integer quantityBought){
-        if(this.quantityBought <= 0){
+        if (this.quantityBought <= 0){
             this.quantityBought = 0;
         } else {
             this.quantityBought = quantityBought;
@@ -60,8 +62,6 @@ public class Invoice {
 
     //creazione metodo per calcolare totale fattura
     public Double getInvoiceAmount(){
-        double totalInvoice;
-        totalInvoice = quantityBought*priceUnitary;
-        return totalInvoice;
+        return quantityBought*priceUnitary;
     }
 }

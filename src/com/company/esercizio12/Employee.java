@@ -47,11 +47,18 @@ public class Employee {
         return salary;
     }
     public Double salaryIncrease(Double percentage){
-        double salaryIncrease;
-        salaryIncrease = salary*((percentage/100)+1);
-        return salaryIncrease;
+        return salary*((percentage/100)+1);
     }
     public static void stampInformation (Employee employeeToStamp){
         System.out.printf("%s %s Salary: %.2f€\n", employeeToStamp.getName(), employeeToStamp.getSurname(), employeeToStamp.getSalary());
+    }
+    public void stampInformation2 (){
+        System.out.printf("%s %s Salary: %.2f€\n", name, surname, salary);
+    }
+    public void stampInformation3 (){
+        System.out.printf("%s %s Salary: %.2f€\n", name, surname, salary);
+    }
+    public String toString() {
+        return "Employee{" + "name= " + name + ", " + " surname=" + surname + ", " + " salary= " + salary + "}";
     }
 }

@@ -38,6 +38,9 @@ public class EmployeeTest {
         salary = input.nextDouble();
         employee5.setSalary(salary);
 
+        employee1.stampInformation2();
+        System.out.println(employee1.toString());
+        /*
         Employee.stampInformation(employee1);
         Employee.stampInformation(employee2);
         Employee.stampInformation(employee3);
@@ -55,5 +58,7 @@ public class EmployeeTest {
         System.out.printf("%s %s Salary: %.2f€\n", employee3.getName(), employee3.getSurname(), (employee1.salaryIncrease(10.0))*12);
         System.out.printf("%s %s Salary: %.2f€\n", employee4.getName(), employee4.getSurname(), (employee1.salaryIncrease(10.0))*12);
         System.out.printf("%s %s Salary: %.2f€\n", employee5.getName(), employee5.getSurname(), (employee1.salaryIncrease(10.0))*12);
+
+         */
     }
 }
