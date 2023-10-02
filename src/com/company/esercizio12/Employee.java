@@ -62,8 +62,8 @@ public class Employee {
     public String toString() {
         return "Employee{" + "Name= " + name + ", " + " Surname=" + surname + ", " + " Salary= " + salary*12 + "}";
     }
-    public static void inputNewEmployee(Employee newEmployee){
-        Scanner input = new Scanner(System.in);
+    public static void inputNewEmployee(Employee newEmployee, Scanner input){
+        //Scanner input = new Scanner(System.in);
         System.out.print("Enter name: ");
         String name = input.next();
         newEmployee.setName(name);
@@ -73,6 +73,5 @@ public class Employee {
         System.out.print("Enter salary: ");
         double salary = input.nextDouble();
         newEmployee.setSalary(salary);
-        input.close();
     }
 }

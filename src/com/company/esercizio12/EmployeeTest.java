@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class EmployeeTest {
     public static void main(String[] args) {
-        //Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         Employee employee1 = new Employee("Giovanni", "Buonsante", 1800.00);
         Employee employee2 = new Employee("Rebecca","Denigris", 1500.00);
         Employee employee3 = new Employee("Vitangelo", "Buonsante",2300.00);
@@ -14,14 +14,19 @@ public class EmployeeTest {
 
 
         //employee 4 and employee 5
-        Employee.inputNewEmployee(employee4);
+        Employee.inputNewEmployee(employee4, input);
         System.out.println("----------------");
-        Employee.inputNewEmployee(employee5);
+        Employee.inputNewEmployee(employee5, input);
 
         //Employee.inputNewEmployee(employee5);
 
         System.out.println(employee1.toString());
         System.out.println(employee2.toString());
+        System.out.println(employee3.toString());
+        System.out.println(employee4.toString());
+        System.out.println(employee5.toString());
+
+        System.out.println("----------------");
 
         employee1.salaryIncrease(10.0);
         employee2.salaryIncrease(10.0);
@@ -31,13 +36,8 @@ public class EmployeeTest {
 
         System.out.println(employee1.toString());
         System.out.println(employee2.toString());
-        /*
-        System.out.printf("%s %s Salary: %.2f€\n", employee1.getName(), employee1.getSurname(), (employee1.salaryIncrease(10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee2.getName(), employee2.getSurname(), (employee1.salaryIncrease(10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee3.getName(), employee3.getSurname(), (employee1.salaryIncrease(10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee4.getName(), employee4.getSurname(), (employee1.salaryIncrease(10.0))*12);
-        System.out.printf("%s %s Salary: %.2f€\n", employee5.getName(), employee5.getSurname(), (employee1.salaryIncrease(10.0))*12);
-
-         */
+        System.out.println(employee3.toString());
+        System.out.println(employee4.toString());
+        System.out.println(employee5.toString());
     }
 }
