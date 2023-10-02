@@ -32,8 +32,4 @@ public class Account {
             balance = balance + depositAmount;
         }
     }
-
-    public String toString() {
-        return "ciaoc iao ciao";
-    }
 }
