@@ -18,13 +18,12 @@ public class EmployeeTest {
         System.out.println("----------------");
         Employee.inputNewEmployee(employee5, input);
 
-        //Employee.inputNewEmployee(employee5);
-
         System.out.println(employee1.toString());
         System.out.println(employee2.toString());
         System.out.println(employee3.toString());
         System.out.println(employee4.toString());
         System.out.println(employee5.toString());
+        System.out.println(employee5);
 
         System.out.println("----------------");
 
