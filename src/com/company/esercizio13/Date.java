@@ -1,5 +1,7 @@
 package com.company.esercizio13;
 
+import java.util.Scanner;
+
 public class Date {
     private Integer day;
     private Integer month;
@@ -28,7 +30,18 @@ public class Date {
     public Integer getYear(){
         return year;
     }
-    public static void displayDate (Integer day, Integer month, Integer year){
+    public void displayDate (){
         System.out.printf("Date: %d/%d/%d\n", day, month, year);
+    }
+    public static void inputDataDate (Date dateInsert){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter one date dd/MM/yyyy : ");
+        int day = input.nextInt();
+        dateInsert.setDay(day);
+        int month = input.nextInt();
+        dateInsert.setMonth(month);
+        int year = input.nextInt();
+        dateInsert.setYear(year);
+        input.close();
     }
 }
