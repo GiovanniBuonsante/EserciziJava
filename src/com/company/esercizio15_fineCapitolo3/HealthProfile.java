@@ -85,6 +85,8 @@ public class HealthProfile {
                 + "\nBMI: " + calculateBmi() + "\n-------------------";
     }
     public void inputHealthProfile(HealthProfile healthProfile, Scanner input){
+        //System.out.println("Enter health Profile: (name, surname, day/month/year, height, weight");
+        //HealthProfile healthProfile2 = new HealthProfile(input.next(),input.next(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextDouble(),input.nextDouble());
         System.out.println("Enter name: ");
         name = input.next();
         healthProfile.setName(name);
