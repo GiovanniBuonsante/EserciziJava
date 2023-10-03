@@ -66,23 +66,23 @@ public class HealthProfile {
     public Double getWeight(){
         return weight;
     }
-    public Double calculateAge(){
-        return (double)2023 - year;
+    public Integer calculateAge(){
+        return 2023 - year;
     }
-    public Double calculateMaxHeartsFrequency(Double age){
+    public Integer calculateMaxHeartsFrequency(Integer age){
         return 220-age;
     }
-    public String calculateIdealHeartsFrequency(Double maxHeartsFrequency){
+    public String calculateIdealHeartsFrequency(Integer maxHeartsFrequency){
         return (maxHeartsFrequency*50/100) + "-" + (maxHeartsFrequency*85/100);
     }
-    public Double calculateBmi(){
-        return weight/(height*height);
+    public Integer calculateBmi(){
+        return (int)(weight/(height*height));
     }
     @Override
     public String toString(){
-        return "Name: " + name + "\nSurname: " + surname +"\n" + day + "/" + month +
+        return "-------------------" + "\nName: " + name + "\nSurname: " + surname +"\n" + day + "/" + month +
                 "/" + year + "\nAge: " + calculateAge() + "\nMax hearts frequency: " + calculateMaxHeartsFrequency(calculateAge()) + "\nIdeal hearts frequency: " + calculateIdealHeartsFrequency(calculateMaxHeartsFrequency(calculateAge()))
-                + "\nBMI: " + calculateBmi();
+                + "\nBMI: " + calculateBmi() + "\n-------------------";
     }
     public void inputHealthProfile(HealthProfile healthProfile, Scanner input){
         System.out.println("Enter name: ");
