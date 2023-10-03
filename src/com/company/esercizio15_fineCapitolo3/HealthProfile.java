@@ -1,3 +1,29 @@
+/*Una questione relativa all’assisten-
+        za sanitaria di cui si è parlato molto negli ultimi tempi è l’informatizzazione della documentazio-
+        ne sanitaria. Questa possibilità viene affrontata con cautela anche a causa delle preoccupazioni
+
+        relative a privacy e sicurezza. [Affronteremo queste problematiche in esercizi successivi.] L’in-
+        formatizzazione della documentazione sanitaria potrebbe semplificare ai pazienti la condivisione
+
+        con i vari professionisti sanitari delle informazioni relative al loro profilo sanitario e alla loro
+
+        anamnesi. Ciò potrebbe migliorare la qualità dell’assistenza sanitaria, aiutare a evitare sia intera-
+        zioni dannose tra medicinali diversi sia prescrizioni sbagliate, ridurre i costi e salvare vite nelle
+
+        emergenze. In questo esercizio, progetterete una classe HealthProfile per una persona. Gli
+        attributi della classe dovrebbero includere nome, cognome, data di nascita (composta da attributi
+        separati per mese, giorno e anno di nascita), altezza in metri e peso in chilogrammi. La vostra
+        classe dovrebbe avere un costruttore che riceve questi dati. Per ogni attributo, fornite metodi set
+        e get. La classe dovrebbe inoltre includere metodi che calcolano e restituiscono l’età dell’utente
+        in anni, la frequenza cardiaca massima e l’intervallo di frequenza cardiaca ideale (vedi Esercizio
+        3.16) e l’indice di massa corporea (BMI; vedi Esercizio 2.33). Scrivete un’applicazione Java
+        che richiede le informazioni sulla persona, istanzia un oggetto della classe HealthProfile per
+        quella persona e stampa le informazioni di quell’oggetto (inclusi nome, cognome, sesso, data di
+        nascita, altezza e peso), quindi calcola e stampa età in anni, BMI, frequenza cardiaca massima e
+
+        intervallo di frequenza cardiaca ideale, visualizzando anche la tabella dei valori del BMI dell’E-
+        sercizio 2.33.
+ */
 package com.company.esercizio15_fineCapitolo3;
 
 import java.util.Calendar;
