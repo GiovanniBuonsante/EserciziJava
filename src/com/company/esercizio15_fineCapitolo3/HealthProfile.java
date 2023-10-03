@@ -7,12 +7,12 @@ public class HealthProfile {
     private String surname;
     private Integer day;
     private Integer month;
-    private Double year;
+    private Integer year;
     private Double height;
     private Double weight;
 
     //costruttore
-    public HealthProfile(String name, String surname, Integer day, Integer month, Double year, Double height, Double weight){
+    public HealthProfile(String name, String surname, Integer day, Integer month, Integer year, Double height, Double weight){
         this.name = name;
         this.surname = surname;
         this.day = day;
@@ -34,7 +34,7 @@ public class HealthProfile {
     public void setMonth(Integer month){
         this.month = month;
     }
-    public void setYear(Double year){
+    public void setYear(Integer year){
         this.year = year;
     }
     public void setHeight(Double height){
@@ -57,7 +57,7 @@ public class HealthProfile {
     public Integer getMonth(){
         return month;
     }
-    public Double getYear(){
+    public Integer getYear(){
         return year;
     }
     public Double getHeight(){
@@ -67,7 +67,7 @@ public class HealthProfile {
         return weight;
     }
     public Double calculateAge(){
-        return 2023 - year;
+        return (double)2023 - year;
     }
     public Double calculateMaxHeartsFrequency(Double age){
         return 220-age;
@@ -98,7 +98,7 @@ public class HealthProfile {
         month = input.nextInt();
         healthProfile.setMonth(month);
         System.out.println("Enter year: ");
-        year = input.nextDouble();
+        year = input.nextInt();
         healthProfile.setYear(year);
         System.out.println("Enter height: ");
         height = input.nextDouble();

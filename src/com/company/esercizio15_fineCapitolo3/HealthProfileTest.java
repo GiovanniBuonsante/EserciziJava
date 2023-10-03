@@ -7,7 +7,7 @@ public class HealthProfileTest {
 
         Scanner input = new Scanner(System.in);
 
-        HealthProfile healthProfile = new HealthProfile("","", 0, 0, 0.0, 0.0, 0.0);
+        HealthProfile healthProfile = new HealthProfile("","", 0, 0, 0, 0.0, 0.0);
 
         healthProfile.inputHealthProfile (healthProfile, input);
 
