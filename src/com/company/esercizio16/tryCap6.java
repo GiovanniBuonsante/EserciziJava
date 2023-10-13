@@ -57,6 +57,7 @@ public class tryCap6 {
 
          */
         //Gioco del lancio del dado
+        //hiiii
         Status gameStatus;
         int sumDice = rollDice();
         int myPoint = 0;
