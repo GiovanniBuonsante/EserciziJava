@@ -7,9 +7,10 @@ public class HealthProfileTest {
 
         Scanner input = new Scanner(System.in);
 
-        HealthProfile healthProfile = new HealthProfile("","", 0, 0, 0, 0.0, 0.0);
+        HealthProfile healthProfile = new HealthProfile();
 
         healthProfile.inputHealthProfile (healthProfile, input);
+
 
         System.out.println("Enter health Profile: (name, surname, day/month/year, height, weight");
         HealthProfile healthProfile1 = new HealthProfile(input.next(),input.next(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextDouble(),input.nextDouble());
