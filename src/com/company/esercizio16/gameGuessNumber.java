@@ -8,7 +8,6 @@ public class gameGuessNumber {
     private enum status {GUESS, GUESSNOT}
     public static void main(String[] args) {
         //hiiiii
-
         Scanner input = new Scanner(System.in);
         int numberTry = 0;
         status statusGame = status.GUESSNOT;
