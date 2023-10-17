@@ -63,7 +63,6 @@ public class tryCap6 {
 
          */
         //Gioco del lancio del dado
-        //hiiii
         Scanner input = new Scanner(System.in);
         bankBalance = 1000;
         Status gameStatus;

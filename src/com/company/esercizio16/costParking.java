@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class costParking {
     public static void main(String[] args) {
-        //HIiiiiii
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the number of the clients: ");
         int numberClient = input.nextInt();
