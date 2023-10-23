@@ -1,8 +1,7 @@
-package com.company.provaArrayList;
+package com.company.esercizio18;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import com.company.provaArrayList.Animal;
+
 public class gameTurtleBunny {
     public final int LENGTH_ROUTE = 70;
 
