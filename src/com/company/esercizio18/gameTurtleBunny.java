@@ -5,23 +5,24 @@ import java.security.SecureRandom;
 public class gameTurtleBunny {
     public final int LENGTH_ROUTE = 70;
 
-    public String[] rootTurtle = new String[LENGTH_ROUTE];
-    public String[] rootBunny = new String[LENGTH_ROUTE];
-
-    //public enum Animal {TURTLE, BUNNY}
-    //public enum Status {WON_BUNNY, WON_TURTLE, CONTINUE}
-
     public int positionTurtle;
 
     public int positionBunny;
 
+    public String[] rootTurtle = new String[LENGTH_ROUTE];
+
+    public String[] rootBunny = new String[LENGTH_ROUTE];
+
     Status gameStatus = Status.CONTINUE;
 
-
     public Status updatePosition(Animal animal) {
+
         SecureRandom randomNumber = new SecureRandom();
+
         int randomChangePosition = 1 + randomNumber.nextInt(10);
+
         switch (animal) {
+
             case TURTLE -> {
                 if(randomChangePosition <= 5) {
                     positionTurtle += 3;
@@ -41,8 +42,8 @@ public class gameTurtleBunny {
                         gameStatus = Status.WON_TURTLE;
                     }
                 }
-                break;
             }
+
             case BUNNY -> {
                 switch (randomChangePosition) {
                     case 1:
@@ -69,6 +70,7 @@ public class gameTurtleBunny {
                     case 7:
                     case 8: {
                         positionBunny += 1;
+
                         if(positionBunny > LENGTH_ROUTE) {
                             gameStatus = Status.WON_BUNNY;
                             positionBunny = LENGTH_ROUTE - 1;
@@ -78,6 +80,7 @@ public class gameTurtleBunny {
                     case 9:
                     case 10:{
                         positionBunny -= 2;
+
                         if (positionBunny < 0 ) {
                             positionBunny = 0;
                         }
@@ -92,37 +95,51 @@ public class gameTurtleBunny {
     }
 
     public void game() {
+
         int round = 1;
+
         do {
             clearRoot();
+
             gameStatus = updatePosition(Animal.BUNNY);
+
             if (positionBunny < LENGTH_ROUTE) {
                 rootBunny[positionBunny] = "B";
             } else {
                 positionBunny = LENGTH_ROUTE - 1;
             }
+
             gameStatus = updatePosition(Animal.TURTLE);
+
             if (positionTurtle < LENGTH_ROUTE) {
                 rootTurtle[positionTurtle] = "T";
             } else {
                 positionTurtle = LENGTH_ROUTE - 1;
             }
+
             if(positionTurtle == positionBunny) {
                 System.out.println("OUCH!");
             }
+
             System.out.print("\nROUND: " + round );
             stampRoot();
             round++;
+
             if(gameStatus == Status.WON_TURTLE) {
                 System.out.println("\nLA TARTARUGA VINCE!!! EVVIVA!");
             }
+
             if(gameStatus == Status.WON_BUNNY) {
                 System.out.println("\nVince il coniglio. Peccato!");
             }
+
         } while (gameStatus == Status.CONTINUE);
     }
+
     public void stampRoot() {
+
         System.out.println("\nBUNNY");
+
         for (int i = 0; i < LENGTH_ROUTE; i++) {
             if(rootBunny[i] == null) {
                 System.out.print("| ");
@@ -130,7 +147,9 @@ public class gameTurtleBunny {
                 System.out.print("|" + rootBunny[i]);
             }
         }
+
         System.out.println("\nTURTLE");
+
         for (int i = 0; i < LENGTH_ROUTE; i++) {
             if(rootTurtle[i] == null) {
                 System.out.print("| ");
@@ -142,6 +161,7 @@ public class gameTurtleBunny {
 
 
     public void clearRoot() {
+
         for (int i = 0; i < LENGTH_ROUTE; i++) {
             rootTurtle[i] = null;
             rootBunny[i] = null;
